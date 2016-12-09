@@ -4,7 +4,7 @@ TTYUSB=$(dmesg | grep tty|grep USB|rev|awk '{print $1}'|rev)
 
 echo -n "USB TTY device found at /dev/"
 echo -n $TTYUSB
-echo.
+echo .
 read -n $linesTOread LINES < /dev/$TTYUSB
 echo "Reading Lines:"
 echo $LINES
